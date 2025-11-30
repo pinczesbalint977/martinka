@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Komatech -  teljes körű klíma karbantartás, ellenőrzés, új telepítés egy kézben országszerte</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -24,6 +24,7 @@
                     <li><a onclick="removetoggle()" href="#service">Szolgáltatások</a></li>
                     <li><a onclick="removetoggle()" href="#about">Rólunk</a></li>
                     <li><a onclick="removetoggle()" href="#machine">Gépeink</a></li>
+                    <li><a onclick="removetoggle()" href="#ref">Referencia</a></li>
                     <li><a onclick="removetoggle()" href="#contact">Kapcsolat</a></li>
                 </ul>
 
@@ -60,7 +61,7 @@
                     <div class="flip-card-back">
                         <i class="fa-solid fa-screwdriver-wrench fixing"></i>
                       <strong>Mit tartalmaz?</strong>
-                      <p>Teljes diagnosztika, szűrő- és gázellenőrzés, javítás 24-48 órán belül. Garancia a munkára.</p>
+                      <p>Teljes diagnosztika, szűrő és gázellenőrzés, javítás 24-48 órán belül.</p>
                     </div>
                   </div>
                 </div>
@@ -76,7 +77,7 @@
                     <div class="flip-card-back">
                         <i class="fa-solid fa-soap fixing"></i>
                       <strong>Mit tartalmaz?</strong>
-                      <p>Szűrőtisztítás, gáznyomás-mérés, hűtési hatékonyság ellenőrzés.</p>
+                      <p>Szűrőtisztítás, mosózsákos klíma tisztitás, hűtési hatékonyság ellenőrzés.</p>
                     </div>
                   </div>
                 </div>
@@ -150,19 +151,35 @@
                 </div>
             </section>
 
+            <section class="ref" id="ref">
+
+              <h2>Referencia képek</h2>
+              <h3 class="kar">Karbantartás</h3>
+              <div class="refer">
+                <img src="pic/1.jpg" alt="">
+                <img src="pic/1.jpg" alt="">
+                <img src="pic/1.jpg" alt="">
+                <img src="pic/1.jpg" alt="">
+              </div>
+              <h3>Telepítés</h3>
+              <div class="refer">
+                <img src="pic/1.jpg" alt="">
+                <img src="pic/1.jpg" alt="">
+                <img src="pic/1.jpg" alt="">
+                <img src="pic/1.jpg" alt="">
+              </div>
+            </section>
+
 
             <section class="contact" id="contact">
               <div class="contactdiv">
                 <div class="form">
-                  <form action="https://formsubmit.co/teemailcimed@gmail.com" method="POST">
+                  <form action="https://formsubmit.co/martin.klima853@gmail.com" method="POST">
                     <h3>Kérj ajánlatot</h3>
                     <input type="text" name="name" placeholder="Neved" required>
                     <input type="email" name="email" placeholder="Email címed" required>
                     <textarea name="message" placeholder="Üzenet" required></textarea>
                     <button type="submit">Küldés</button>
-
-
-                    <input type="hidden" name="_next" value="https://pbweb.hu/koszonjuk.html">
                   </form>
 
                 </div>
@@ -170,8 +187,8 @@
                 <div class="contacts">
                   <h3>Elérhetőségeink</h3>
                  <div class="telmail">
-                  <a href="mailto:martinka45@gmail.com"><i class="fa-solid fa-envelope"></i>martinka45@gmail.com</a>
-                  <a href="tel:+36307144802"> <i class="fa-solid fa-phone-volume"></i> +36 30 714 4802</a>
+                  <a href="mailto:martin.klima853@gmail.com"><i class="fa-solid fa-envelope"></i>martin.klima853@gmail.com</a>
+                  <a href="tel:+36307312741"> <i class="fa-solid fa-phone-volume"></i> +36 30 731 2741</a>
                  </div>
                 </div>
               </div>
@@ -183,7 +200,52 @@
             © 2025 Komatech Kft. — Minden jog fenntartva.
           </footer>
 
+
+
+          <!-- COOKIE BANNER -->
+          <div id="cookieBanner" class="cookie-banner" aria-hidden="true" role="dialog" aria-label="Süti beállítások">
+            <div class="cookie-inner">
+              <div class="cookie-text">
+                <h3>Elfogadod a sütiket?</h3>
+                <p>Weboldalunk sütiket használ a jobb működésért és statisztikákhoz. Választhatsz, hogy csak a szükséges sütiket engeded, vagy az összeset elfogadod.</p>
+                <p class="cookie-small"><a href="cookie.html">Adatvédelmi tájékoztató</a></p>
+              </div>
+            
+              <div class="cookie-actions">
+                <button id="cookieEssential" class="cookie-btn cookie-essential">Csak szükséges</button>
+                <button id="cookieAcceptAll" class="cookie-btn cookie-accept">Összes elfogadása</button>
+                <button id="cookieSettingsBtn" class="cookie-btn cookie-settings" aria-haspopup="dialog" aria-controls="cookieSettings">Beállítások</button>
+              </div>
+            </div>
+          
+            <!-- Modal a részletes beállításoknak -->
+            <div id="cookieSettings" class="cookie-settings" role="dialog" aria-modal="true" aria-hidden="true">
+              <div class="settings-inner">
+                <h4>Süti beállítások</h4>
+                <p>Kapcsold be/ki a következő sütik típusokat.</p>
+              
+                <label class="setting-row">
+                  <input type="checkbox" id="analyticsChk">
+                  <span>Analitika sütik (statisztika)</span>
+                </label>
+              
+                <label class="setting-row">
+                  <input type="checkbox" id="marketingChk">
+                  <span>Marketing sütik (hirdetések)</span>
+                </label>
+              
+                <div class="settings-actions">
+                  <button id="saveSettings" class="cookie-btn cookie-accept">Mentés és bezárás</button>
+                  <button id="closeSettings" class="cookie-btn cookie-essential">Mégse</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /COOKIE BANNER -->
+
   
         <script src="app.js"></script>
+
+
     </body>
 </html>

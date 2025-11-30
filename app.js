@@ -161,6 +161,111 @@ const app = new Vue({
 
 
 
+// Süti kezelő — Komatech
+(function () {
+  const KEY = 'komatech_cookie_consent';
+
+  // DOM elemek
+  const banner = document.getElementById('cookieBanner');
+  const acceptAll = document.getElementById('cookieAcceptAll');
+  const onlyEssential = document.getElementById('cookieEssential');
+  const settingsBtn = document.getElementById('cookieSettingsBtn');
+  const settingsModal = document.getElementById('cookieSettings');
+  const analyticsChk = document.getElementById('analyticsChk');
+  const marketingChk = document.getElementById('marketingChk');
+  const saveSettings = document.getElementById('saveSettings');
+  const closeSettings = document.getElementById('closeSettings');
+
+  // olvassuk a jelenlegi beállítást
+  function readConsent() {
+    try {
+      const raw = localStorage.getItem(KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveConsent(obj) {
+    localStorage.setItem(KEY, JSON.stringify(obj));
+    applyConsent(obj);
+    hideBanner();
+  }
+
+  function applyConsent(obj) {
+    // ide tudsz betenni feltételes script betöltést,
+    // pl. ha (obj.analytics) akkor indítod a analytics kódot
+    // mert most nincs külső kód, csak bemutató:
+    if (obj.analytics) {
+      console.log('Analytics engedélyezve — ide töltsd be az analytics scriptet.');
+    } else {
+      console.log('Analytics tiltva');
+    }
+    if (obj.marketing) {
+      console.log('Marketing engedélyezve — ide töltsd be a marketing scriptet.');
+    } else {
+      console.log('Marketing tiltva');
+    }
+  }
+
+  function showBanner() {
+    if (!banner) return;
+    banner.setAttribute('aria-hidden', 'false');
+  }
+  function hideBanner() {
+    if (!banner) return;
+    banner.setAttribute('aria-hidden', 'true');
+  }
+
+  // események
+  if (acceptAll) acceptAll.addEventListener('click', function () {
+    saveConsent({ essential: true, analytics: true, marketing: true, timestamp: Date.now() });
+  });
+
+  if (onlyEssential) onlyEssential.addEventListener('click', function () {
+    saveConsent({ essential: true, analytics: false, marketing: false, timestamp: Date.now() });
+  });
+
+  if (settingsBtn && settingsModal) settingsBtn.addEventListener('click', function () {
+    // töltsük a checkboxokat a jelenlegi állapot szerint
+    const c = readConsent() || { analytics: false, marketing: false };
+    analyticsChk.checked = !!c.analytics;
+    marketingChk.checked = !!c.marketing;
+    settingsModal.setAttribute('aria-hidden', 'false');
+  });
+
+  if (closeSettings) closeSettings.addEventListener('click', function () {
+    settingsModal.setAttribute('aria-hidden', 'true');
+  });
+
+  if (saveSettings) saveSettings.addEventListener('click', function () {
+    const obj = {
+      essential: true,
+      analytics: !!analyticsChk.checked,
+      marketing: !!marketingChk.checked,
+      timestamp: Date.now()
+    };
+    saveConsent(obj);
+    settingsModal.setAttribute('aria-hidden', 'true');
+  });
+
+  // inicializálás: ha van consent, alkalmazzuk; különben mutatjuk a bannert
+  const existing = readConsent();
+  if (existing) {
+    applyConsent(existing);
+    hideBanner();
+  } else {
+    showBanner();
+  }
+
+  // accessibility: ESC bezárja a modal-t
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      settingsModal && settingsModal.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+})();
 
 
 
