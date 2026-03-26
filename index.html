@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-…[ellenőrzött hash]…" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="pic/KOMATECH.png" type="image/x-icon">
+        <link rel="shortcut icon" href="pic/KOMATECH.png" type="image/x-icon">
 
     </head>
 
@@ -24,6 +25,7 @@
                     <li><a onclick="removetoggle()" href="#service">Szolgáltatások</a></li>
                     <li><a onclick="removetoggle()" href="#about">Rólunk</a></li>
                     <li><a onclick="removetoggle()" href="#machine">Gépeink</a></li>
+                    <li><a onclick="removetoggle()" href="#pricing">Áraink</a></li>
                     <li><a onclick="removetoggle()" href="#ref">Referencia</a></li>
                     <li><a onclick="removetoggle()" href="#contact">Kapcsolat</a></li>
                 </ul>
@@ -131,42 +133,119 @@
             </section>
 
             <section class="machine" id="machine">
-                <h2>Gépeink</h2>
+                <h2>Gyakran szerelt gépeink</h2>
                 
                 <div id="app" class="machine-container">
-                    <card data-image="pic/klima.png">
-                        <h3 slot="header">Modern Klímaszerelő Eszközök</h3>
-                        <p slot="content">Professzionális felszereléssel dolgozunk a precíz és gyors munkavégzés érdekében. Legmodernebb eszközeink garantálják a minőségi munkát.</p>
+                    <card data-image="pic/greco.png">
+                        <h3 slot="header">Gree Comfort Pro</h3>
+                        <p slot="content">
+                          Hűtő teljesítmény: 3.5 kW <br>
+                          Fűtő teljesítmény: 3.8 kW <br>
+                          Energiaosztály: A+++ <br>
+                          Wi-Fi vezérlés <br>
+                          Extra csendes működés <br>
+                          Télíesitett kivitel (akár -25°C-ig) <br>
+                        </p>
                     </card>
                     
-                    <card data-image="pic/klima.png">
-                        <h3 slot="header">Nagy Teljesítményű Vákuumszivattyúk</h3>
-                        <p slot="content">A megbízhatóság kulcsa a megfelelő előkészítés. Erre különös figyelmet fordítunk, hogy klímarendszere tökéletesen működjön.</p>
+                    <card data-image="pic/sky.png">
+                        <h3 slot="header">Skyworth Vela</h3>
+                        <p slot="content">
+                          Hűtő teljesítmény: 3.5 kW <br>
+                          Fűtő teljesítmény: 3.5 kW <br>
+                          Energiaosztály: A++ <br>
+                          Wi-Fi vezérlés <br>
+                          Extra csendes működés <br>
+                          Télíesitett kivitel (akár -15°C-ig)
+                        </p>
                     </card>
                     
-                    <card data-image="pic/klima.png">
-                        <h3 slot="header">Digitális Mérőműszerek</h3>
-                        <p slot="content">Pontos diagnosztika, precíz beállítás minden a tökéletes hűtésért és fűtésért. Technikánk a legmodernebb mérési módszereken alapul.</p>
+                    <card data-image="pic/hiense.png">
+                        <h3 slot="header">Hiense Energy Pro X</h3>
+                        <p slot="content">
+                          Hűtő teljesítmény: 3.5 kW <br>
+                          Fűtő teljesítmény: 4.0 kW <br>
+                          Energiaosztály: A+++ <br>
+                          Wi-Fi vezérlés <br>
+                          Extra csendes működés <br>
+                          Télíesitett kivitel (akár -15°C-ig)
+                        </p>
                     </card>
                 </div>
             </section>
 
+            <section class="pricing" id="pricing">
+              <div class="pricing-inner">
+                <div class="pricing-heading">
+                  <h2>Gyakran szerelt gépeink árazása</h2>
+                  <p>
+                    Az alábbi irányár a leggyakrabban telepített berendezésünkre vonatkozik,
+                    komplett kivitelezéssel, 3 méteres hűtőkör kiépítéséig.
+                  </p>
+                </div>
+
+                <div class="pricing-card">
+                  <div class="pricing-main">
+                    <span class="pricing-label">Komplett telepítési csomag</span>
+                    <h3>Gree Comfort Pro</h3>
+                    <div class="pricing-amount">300.000 Ft</div>
+                    <p class="pricing-note">
+                      3 méter hűtőkörön belül, géppel, szereléssel és a szükséges alapanyagokkal együtt.
+                    </p>
+                  </div>
+
+                  <div class="pricing-details">
+                    <div class="pricing-list">
+                      <div class="pricing-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>A csomag tartalmazza a klímaberendezés helyszínre szállítását és teljes telepítését.</p>
+                      </div>
+                      <div class="pricing-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Az ár magában foglalja a szerelési munkadíjat, valamint a beépítéshez szükséges anyagköltséget.</p>
+                      </div>
+                      <div class="pricing-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>3 méter hűtőkör kiépítése benne van az árban, igényes és esztétikus kivitelezéssel.</p>
+                      </div>
+                      <div class="pricing-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Pormentes fúrási technikával dolgozunk, hogy a szerelés tisztábban és rendezettebben történjen.</p>
+                      </div>
+                      <div class="pricing-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Az elektromos vezetékek alap kialakítása, bekötése és a telepítéshez szükséges alapmunkák szintén részei a csomagnak.</p>
+                      </div>
+                      <div class="pricing-item">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Az üzembe helyezést, a működés ellenőrzését és a rendszer használatának rövid bemutatását is elvégezzük.</p>
+                      </div>
+                    </div>
+
+                    <p class="pricing-footnote">
+                      Egyedi helyszíni adottságok, hosszabb csővezeték, speciális tartószerkezet vagy extra elektromos kiépítés esetén a végösszeg változhat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <section class="ref" id="ref">
 
-              <h2>Referencia képek</h2>
+              <h2 class="refh2">Referencia képek</h2>
               <h3 class="kar">Karbantartás</h3>
               <div class="refer">
-                <img src="pic/1.jpg" alt="">
-                <img src="pic/1.jpg" alt="">
-                <img src="pic/1.jpg" alt="">
-                <img src="pic/1.jpg" alt="">
+                <img src="pic/kar2.jpg" alt="">
+                <img src="pic/kar1.jpg" alt="">
+                <img src="pic/karban (1).jpg" alt="">
+                <img src="pic/karban (2).jpg" alt="">
               </div>
               <h3>Telepítés</h3>
               <div class="refer">
-                <img src="pic/1.jpg" alt="">
-                <img src="pic/1.jpg" alt="">
-                <img src="pic/1.jpg" alt="">
-                <img src="pic/1.jpg" alt="">
+                <img src="pic/telep (1).jpg" alt="">
+                <img src="pic/telep (3).jpg" alt="">
+                <img src="pic/telep (4).jpg" alt="">
+                <img src="pic/telep (2).jpg" alt="">
               </div>
             </section>
 
